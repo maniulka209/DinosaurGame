@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|c:\\users\\maria\\onedrive\\pulpit\\dinosaurgame\\dinousaurgame\\dinousaurgame\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|solutionrelative:dinousaurgame\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Game1.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Game1.cs",
+              "RelativeDocumentMoniker": "DinousaurGame\\Game1.cs",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Game1.cs",
+              "RelativeToolTip": "DinousaurGame\\Game1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T18:18:27.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
