@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourceFile>C:/Users/maria/OneDrive/Pulpit/DinosaurGame/DinousaurGame/DinousaurGame/Content/button-press.mp3</SourceFile>
+  <SourceTime>2024-09-09T17:47:31.3984657+02:00</SourceTime>
+  <DestFile>C:/Users/maria/OneDrive/Pulpit/DinosaurGame/DinousaurGame/DinousaurGame/Content/bin/Windows/Content/button-press.xnb</DestFile>
+  <DestTime>2024-09-26T18:07:54.8669744+02:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2022-07-26T13:44:56+02:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2022-07-26T13:44:56+02:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
