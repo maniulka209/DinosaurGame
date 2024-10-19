@@ -1,3 +1,3 @@
 ﻿
-using var game = new TrexRunner.TrexRunnerGame();
+using var game = new DinosaurGame.TrexRunnerGame();
 game.Run();

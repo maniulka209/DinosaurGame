@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TrexRunner.Graphics
+namespace DinosaurGame.Graphics
 {
 
     public class SpriteM  //allow to draw sprite faster and easier
@@ -39,7 +39,6 @@ namespace TrexRunner.Graphics
         {
             spriteBatch.Draw(Texture , position , new Rectangle(X, Y, Width, Height), TintColor);
          
-
         }
     }
 }

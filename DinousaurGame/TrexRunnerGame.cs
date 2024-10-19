@@ -3,9 +3,10 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using SharpDX.Direct3D9;
-using TrexRunner.Graphics;
+using DinosaurGame.Graphics;
+using DinousaurGame.Entities;
 
-namespace TrexRunner
+namespace DinosaurGame
 {
     public class TrexRunnerGame : Game
     {
@@ -25,6 +26,15 @@ namespace TrexRunner
         private SoundEffect _sfxButtonPress;
         
         private Texture2D _SpriteSheetTexture;
+
+
+        public const int WINDOW_WIDTH = 600;
+        public const int WINDOW_HEIGHT = 150;
+
+        public const int TREX_START_POSITION_Y = WINDOW_HEIGHT - 16 - 49;
+        public const int TREX_START_POSITION_X =  1;
+
+        private Trex _trex;
         public TrexRunnerGame()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -34,9 +44,13 @@ namespace TrexRunner
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
 
             base.Initialize();
+            _graphics.PreferredBackBufferHeight = WINDOW_HEIGHT;
+            _graphics.PreferredBackBufferWidth = WINDOW_WIDTH;
+            _graphics.ApplyChanges();
+            
+
         }
 
         protected override void LoadContent()
@@ -49,6 +63,10 @@ namespace TrexRunner
             _sfxHit = Content.Load<SoundEffect>(ASSET_NAME_SFX_HIT);
 
             _SpriteSheetTexture = Content.Load<Texture2D>(ASSET_NAME_SPRITESHEET);
+
+            _trex = new Trex(_SpriteSheetTexture, new Vector2(TREX_START_POSITION_X,TREX_START_POSITION_Y));
+
+            
         }
 
         protected override void Update(GameTime gameTime)
@@ -59,19 +77,17 @@ namespace TrexRunner
             // TODO: Add your update logic here
 
             base.Update(gameTime);
+            _trex.Update(gameTime);
         }
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Black);
+            GraphicsDevice.Clear(Color.White);
 
             _spriteBatch.Begin();
 
-
-            //  this  replace _spriteBatch.Draw(_SpriteSheetTexture, new Vector2(10, 10), new Rectangle(848,0,44,49),Color.White);  
-            SpriteM DefultTrex = new SpriteM(_SpriteSheetTexture, 848, 0, 44, 49);
-            DefultTrex.Draw(_spriteBatch, new Vector2(50, 50));
-            
+            _trex.Draw( gameTime,_spriteBatch);
+                
             _spriteBatch.End(); 
 
             base.Draw(gameTime);
