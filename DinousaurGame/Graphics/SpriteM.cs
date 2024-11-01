@@ -38,7 +38,6 @@ namespace DinosaurGame.Graphics
         public void Draw(SpriteBatch spriteBatch, Vector2 position)
         {
             spriteBatch.Draw(Texture , position , new Rectangle(X, Y, Width, Height), TintColor);
-         
         }
     }
 }

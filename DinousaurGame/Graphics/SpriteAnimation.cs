@@ -106,9 +106,15 @@ namespace DinousaurGame.Graphics
             
         }
 
-
+        public void Clear()
+        {
+            Stop();
+            _frames.Clear();
+            
+        }
         private List<SpriteAnimationFrame> _frames = new List<SpriteAnimationFrame>();
 
+        
         
     }
 }
