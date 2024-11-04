@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using SharpDX.Direct3D11;
+using SharpDX.WIC;
 using SharpDX.XInput;
 using System;
 using System.Collections.Generic;
@@ -28,10 +29,22 @@ namespace DinousaurGame.Entities
 
             _idleSprite = new SpriteM(spriteSheet , TREX_DEFULT_SPRITE_POS_X , TREX_DEFULT_SPRITE_POS_Y ,TREX_DEFULT_SPRITE_WIDTH ,TREX_DEFULT_SPRITE_HEIGHT) ;
             _idleBlinkingSprite = new SpriteM(spriteSheet, TREX_DEFULT_SPRITE_POS_X + TREX_DEFULT_SPRITE_WIDTH, TREX_DEFULT_SPRITE_POS_Y, TREX_DEFULT_SPRITE_WIDTH, TREX_DEFULT_SPRITE_HEIGHT);
+            _runSpriteOne = new SpriteM(spriteSheet, TREX_RUNNING_SPRITE_ONE_POS_X, TREX_RUNNING_SPRITE_ONE_POS_Y, TREX_DEFULT_SPRITE_WIDTH, TREX_DEFULT_SPRITE_HEIGHT);
+            _runSpriteTwo = new SpriteM(spriteSheet, TREX_RUNNING_SPRITE_ONE_POS_X + TREX_DEFULT_SPRITE_WIDTH, TREX_RUNNING_SPRITE_ONE_POS_Y, TREX_DEFULT_SPRITE_WIDTH, TREX_DEFULT_SPRITE_HEIGHT);
+            _duckSpriteOne = new SpriteM(spriteSheet, TREX_DUCKING_SPRITE_POS_X, TREX_DUCKING_SPRITE_POS_Y, TREX_DUCKING_SPRITE_WIDTH, TREX_DEFULT_SPRITE_HEIGHT);
+            _duckSpriteTwo = new SpriteM(spriteSheet, TREX_DUCKING_SPRITE_POS_X + TREX_DUCKING_SPRITE_WIDTH , TREX_DUCKING_SPRITE_POS_Y, TREX_DUCKING_SPRITE_WIDTH, TREX_DEFULT_SPRITE_HEIGHT);
 
             _blinkAnimation = new SpriteAnimation();
             CreateBlinkAnimation();
             _blinkAnimation.Play();
+
+            _runAnimation = new SpriteAnimation();
+            CreatRunAnimation();
+            _runAnimation.Play();
+
+            _duckAnimation = new SpriteAnimation();
+            CreatDuckAnimation();
+            _duckAnimation.Play();
 
             _jumpSound = jumpSound;
 
@@ -57,9 +70,17 @@ namespace DinousaurGame.Entities
                 _idleTrexBackGroundSprite.Draw(spriteBatch, this.Position);
                 _blinkAnimation.Draw(spriteBatch, this.Position);
             }
-            if (State == TrexState.Jumping || State == TrexState.Falling)
+            else if (State == TrexState.Jumping || State == TrexState.Falling)
             {
                 _idleSprite.Draw(spriteBatch, this.Position);
+            }
+            else if (State == TrexState.Running)
+            {
+                _runAnimation.Draw(spriteBatch, this.Position);
+            }
+            else if (State == TrexState.Ducking)
+            {
+                _duckAnimation.Draw(spriteBatch, this.Position);
             }
         }
 
@@ -80,9 +101,10 @@ namespace DinousaurGame.Entities
             }
              else if( State == TrexState.Falling || State == TrexState.Jumping)
             {
-                this.Position = new Vector2(Position.X, Position.Y + _verticalVelocity * (float)gameTime.ElapsedGameTime.TotalSeconds);
-                _verticalVelocity += GRAVITY * (float)gameTime.ElapsedGameTime.TotalSeconds;
-                if(_verticalVelocity >= 0)
+                this.Position = new Vector2(Position.X, Position.Y + _verticalVelocity * (float)gameTime.ElapsedGameTime.TotalSeconds );
+                _verticalVelocity += GRAVITY * (float)gameTime.ElapsedGameTime.TotalSeconds  ;
+                _verticalVelocity += _dropVelocity * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                if (_verticalVelocity >= 0)
                 {
                     State = TrexState.Falling;
                 }
@@ -90,13 +112,54 @@ namespace DinousaurGame.Entities
                 {
                     _verticalVelocity = 0;
                     this.Position = new Vector2(Position.X, _startPosY);
-                    State = TrexState.Idle;
+                    State = TrexState.Running;
                 }
             }
 
+            else if ( State == TrexState.Running)
+            {
+                _runAnimation.Update(gameTime);
+            }
+            else if (State == TrexState.Ducking)
+            {
+                _duckAnimation.Update(gameTime);
+            }
+
+            _dropVelocity = 0;
+        }
+        public bool Duck()
+        { 
+            if(State == TrexState.Jumping || State == TrexState.Falling)
+            {
+                return false;
+            }
+            State = TrexState.Ducking;
+            return true;
         }
 
-        public bool BeginJump()
+        
+
+        public bool Drop()
+        {
+            if(State != TrexState.Falling && State !=TrexState.Jumping)
+            {
+                return false;
+            }
+            State = TrexState.Falling;
+            _dropVelocity = DROP_VELOCITY;
+            return true;
+
+        }
+        public bool CancelDuck()
+        {
+            if(State != TrexState.Ducking)
+            {
+                return false;
+            }
+            State = TrexState.Running;
+            return true;
+        }
+        public bool BeginJump() 
         {
             if( State == TrexState.Jumping || State == TrexState.Falling)
             {
@@ -112,6 +175,7 @@ namespace DinousaurGame.Entities
             return true;
         }
 
+
         public bool CancelJump()
         {
             if (State == TrexState.Jumping && (_startPosY - Position.Y) >= MIN_JUMP_HIGHT)
@@ -125,15 +189,22 @@ namespace DinousaurGame.Entities
 
         private float _verticalVelocity;
         private float _startPosY;
+        private float _dropVelocity;
         
 
         private SoundEffect _jumpSound;
        
         private SpriteAnimation _blinkAnimation;
+        private SpriteAnimation _runAnimation;
+        private SpriteAnimation _duckAnimation;
 
         private SpriteM _idleTrexBackGroundSprite;
         private SpriteM _idleSprite ;
         private SpriteM _idleBlinkingSprite;
+        private SpriteM _runSpriteOne;
+        private SpriteM _runSpriteTwo;
+        private SpriteM _duckSpriteOne;
+        private SpriteM _duckSpriteTwo;
 
         private const int TREX_IDLE_BACKGROUND_SPRITE_POS_X = 40;
         private const int TREX_IDLE_BACKGROUND_SPRITE_POS_Y = 0;
@@ -142,12 +213,21 @@ namespace DinousaurGame.Entities
         private const float JUMP_START_VELOCITY = -480f;
         private const float GRAVITY = 1600f;
         private const float MIN_JUMP_HIGHT = 40f;
+        private const float DROP_VELOCITY = 2500f;
 
 
         private const int TREX_DEFULT_SPRITE_WIDTH = 44;
         private const int TREX_DEFULT_SPRITE_POS_X = 848;
         private const int TREX_DEFULT_SPRITE_POS_Y = 0;
         private const int TREX_DEFULT_SPRITE_HEIGHT = 49;
+
+        private const int TREX_RUNNING_SPRITE_ONE_POS_X = TREX_DEFULT_SPRITE_POS_X + TREX_DEFULT_SPRITE_WIDTH * 2;
+        private const int TREX_RUNNING_SPRITE_ONE_POS_Y = TREX_DEFULT_SPRITE_POS_Y ;
+
+        private const int TREX_DUCKING_SPRITE_WIDTH = 59;
+        private const int TREX_DUCKING_SPRITE_POS_X = 1111;
+        private const int TREX_DUCKING_SPRITE_POS_Y = 0;
+       
 
         private Random _random ;
 
@@ -164,5 +244,19 @@ namespace DinousaurGame.Entities
             _blinkAnimation.AddFrame(_idleBlinkingSprite,(float)blinkTimeStamp);
             _blinkAnimation.AddFrame(_idleSprite, (float)blinkTimeStamp + 1f);
         }
+
+        private void CreatRunAnimation()
+        {
+            _runAnimation.AddFrame( _runSpriteOne, 0);
+            _runAnimation.AddFrame( _runSpriteTwo, 0.1f);
+            _runAnimation.AddFrame( _runSpriteOne, 0.1f *2);
+        }
+        private void CreatDuckAnimation()
+        {
+            _duckAnimation.AddFrame(_duckSpriteOne, 0);
+            _duckAnimation.AddFrame(_duckSpriteTwo, 0.1f);
+            _duckAnimation.AddFrame(_duckSpriteOne, 0.1f * 2);
+        }
+
     }
 }

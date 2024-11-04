@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 using SharpDX.Direct3D11;
+using SharpDX.XInput;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,23 @@ namespace DinousaurGame.System
             {
                 _trex.CancelJump();
             }
+            else if(keyboardstate.IsKeyDown(Keys.Down))
+            {
+                if (_trex.State == TrexState.Jumping || _trex.State == TrexState.Falling) 
+                {
+                    _trex.Drop();
+                }
+                else
+                {
+                    _trex.Duck();
+                }
+            }
+            else if (keyboardstate.IsKeyUp(Keys.Down)  && _trex.State == TrexState.Ducking)
+            {
+                _trex.CancelDuck();
+            }
+
+
             _privouskeyboardstate = keyboardstate;
         }
 
