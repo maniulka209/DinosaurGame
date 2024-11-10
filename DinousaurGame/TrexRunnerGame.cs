@@ -17,6 +17,7 @@ namespace DinosaurGame
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
+            _entityManager = new EntityManager();
         }
 
         protected override void Initialize()
@@ -40,9 +41,15 @@ namespace DinosaurGame
             _SpriteSheetTexture = Content.Load<Texture2D>(ASSET_NAME_SPRITESHEET);
 
             _trex = new Trex(_SpriteSheetTexture, new Vector2(TREX_START_POSITION_X,TREX_START_POSITION_Y),_sfxButtonPress);
+            _trex.DrawOrder = 10;
+
             _inputController = new InputController(_trex);
 
-            
+            _groundManager = new GroundManager(_SpriteSheetTexture, _entityManager,_trex);
+            _groundManager.Initialize();
+
+            _entityManager.AddEntity(_trex);
+            _entityManager.AddEntity(_groundManager);
         }
 
         protected override void Update(GameTime gameTime)
@@ -52,7 +59,8 @@ namespace DinosaurGame
 
             base.Update(gameTime);
             _inputController.ProcessControls(gameTime);
-            _trex.Update(gameTime);
+            _entityManager.Update(gameTime);
+            
         }
 
         protected override void Draw(GameTime gameTime)
@@ -62,7 +70,7 @@ namespace DinosaurGame
 
             _spriteBatch.Begin();
 
-            _trex.Draw( gameTime,_spriteBatch);
+            _entityManager.Draw( gameTime,_spriteBatch);
                 
             _spriteBatch.End(); 
 
@@ -91,5 +99,8 @@ namespace DinosaurGame
 
         private Trex _trex;
         private InputController _inputController;
+
+        private EntityManager _entityManager;
+        private GroundManager _groundManager;
     }
 }

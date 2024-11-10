@@ -38,7 +38,7 @@ namespace DinousaurGame.System
             else if(keyboardstate.IsKeyDown(Keys.Down))
             {
                 if (_trex.State == TrexState.Jumping || _trex.State == TrexState.Falling) 
-                {
+                { 
                     _trex.Drop();
                 }
                 else

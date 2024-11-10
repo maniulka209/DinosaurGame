@@ -16,7 +16,7 @@ namespace DinousaurGame.Entities
 {
     public class Trex : IGameEntity
     {
-
+        
         public Trex(Microsoft.Xna.Framework.Graphics.Texture2D spriteSheet, Vector2 position ,  SoundEffect jumpSound ) 
         { 
             
@@ -54,14 +54,13 @@ namespace DinousaurGame.Entities
         public Vector2 Position { get; set; }
 
 
-        public TrexState State { get; private set; }
+        public TrexState State { get; private set; } 
 
         public bool IsAlive { get; private set; }
 
         public int DrawOrder { get; set; }
 
-        public float Speed {  get; private  set; }
-
+        public float Speed { get; private set; } = 200f;
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
@@ -119,6 +118,7 @@ namespace DinousaurGame.Entities
             else if ( State == TrexState.Running)
             {
                 _runAnimation.Update(gameTime);
+               
             }
             else if (State == TrexState.Ducking)
             {
