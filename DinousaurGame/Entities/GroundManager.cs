@@ -76,7 +76,7 @@ namespace DinousaurGame.Entities
         private const int SPRITE_HEIGHT = 14;
         private const int SPRITE_POS_X = 2;
         private const int SPRITE_POS_Y = 54;
-        private const float GROUND_TILE_POS_Y = 119;
+        private const float GROUND_TILE_POS_Y = 122;
 
         private Texture2D _spriteSheet;
         private SpriteM _regularSprite;

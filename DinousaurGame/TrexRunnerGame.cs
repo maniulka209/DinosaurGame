@@ -11,13 +11,15 @@ namespace DinosaurGame
 {
     public class TrexRunnerGame : Game
     {
-
+        public GameState State { get; private set; }
         public TrexRunnerGame()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
             _entityManager = new EntityManager();
+            State = GameState.Initial;
+            _fadeInTexturePosX = 44;
         }
 
         protected override void Initialize()
@@ -43,6 +45,9 @@ namespace DinosaurGame
             _trex = new Trex(_SpriteSheetTexture, new Vector2(TREX_START_POSITION_X,TREX_START_POSITION_Y),_sfxButtonPress);
             _trex.DrawOrder = 10;
 
+            _fadeInTexture = new Texture2D(GraphicsDevice, 1, 1);
+            _fadeInTexture.SetData(new Color[] {Color.White});
+
             _inputController = new InputController(_trex);
 
             _groundManager = new GroundManager(_SpriteSheetTexture, _entityManager,_trex);
@@ -58,8 +63,35 @@ namespace DinosaurGame
                 Exit();
 
             base.Update(gameTime);
-            _inputController.ProcessControls(gameTime);
+
+            KeyboardState keyboardstate = Keyboard.GetState();
+
+            if (State == GameState.Playing)
+            {
+                _inputController.ProcessControls(gameTime);
+                
+            }
+            else if (State == GameState.Transition)
+            {
+                _fadeInTexturePosX += 800f * (float)gameTime.ElapsedGameTime.TotalSeconds;
+
+                if (_fadeInTexturePosX >= WINDOW_WIDTH) 
+                {
+                    State = GameState.Playing;
+                }
+
+            }
+            else if(State == GameState.Initial)
+            {
+                if (keyboardstate.IsKeyDown(Keys.Up) || keyboardstate.IsKeyDown(Keys.Space))
+                {
+                    StartGame();
+                }
+            }
+
             _entityManager.Update(gameTime);
+
+            
             
         }
 
@@ -71,6 +103,10 @@ namespace DinosaurGame
             _spriteBatch.Begin();
 
             _entityManager.Draw( gameTime,_spriteBatch);
+            if (State == GameState.Initial || State == GameState.Transition)
+            {
+                _spriteBatch.Draw(_fadeInTexture, new Rectangle((int)System.Math.Round(_fadeInTexturePosX),0,WINDOW_WIDTH,WINDOW_HEIGHT),Color.White);
+            }
                 
             _spriteBatch.End(); 
 
@@ -96,11 +132,26 @@ namespace DinosaurGame
         private SoundEffect _sfxButtonPress;
 
         private Texture2D _SpriteSheetTexture;
+        private Texture2D _fadeInTexture;
+
+        private float _fadeInTexturePosX;
 
         private Trex _trex;
         private InputController _inputController;
 
         private EntityManager _entityManager;
         private GroundManager _groundManager;
+
+
+        private bool StartGame()
+        {
+            if(State != GameState.Initial)
+            {
+                return false;
+            }
+            State = GameState.Transition;
+            _trex.BeginJump();
+            return true;
+        }
     }
 }

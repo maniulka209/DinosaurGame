@@ -60,7 +60,7 @@ namespace DinousaurGame.Entities
 
         public int DrawOrder { get; set; }
 
-        public float Speed { get; private set; } = 200f;
+        public float Speed { get; private set; } 
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
