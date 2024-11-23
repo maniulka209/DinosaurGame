@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DinousaurGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f328346ff158b20aa6994fc494aaf099ebb72555")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ddc100f7568d394c37eb70089e04bf4685d6c008")]
 [assembly: System.Reflection.AssemblyProductAttribute("DinousaurGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DinousaurGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -18,8 +18,20 @@ namespace DinosaurGame
             Content.RootDirectory = "Content";
             IsMouseVisible = true;
             _entityManager = new EntityManager();
+
             State = GameState.Initial;
             _fadeInTexturePosX = 44;
+
+
+        }
+
+        private void HandleJumpComplete(object sender, System.EventArgs e)
+        {
+            if(State == GameState.Transition)
+            {
+                State = GameState.Playing;
+                _trex.Initialize ();
+            }
         }
 
         protected override void Initialize()
@@ -45,6 +57,9 @@ namespace DinosaurGame
             _trex = new Trex(_SpriteSheetTexture, new Vector2(TREX_START_POSITION_X,TREX_START_POSITION_Y),_sfxButtonPress);
             _trex.DrawOrder = 10;
 
+            _scoreBoard = new ScoreBoard(_SpriteSheetTexture , new Vector2(WINDOW_WIDTH - 100f , 10f));
+            _scoreBoard.Score = 234;
+
             _fadeInTexture = new Texture2D(GraphicsDevice, 1, 1);
             _fadeInTexture.SetData(new Color[] {Color.White});
 
@@ -55,7 +70,12 @@ namespace DinosaurGame
 
             _entityManager.AddEntity(_trex);
             _entityManager.AddEntity(_groundManager);
+            _entityManager.AddEntity(_scoreBoard);
+
+            _trex.JumpComplete += HandleJumpComplete;
         }
+
+       
 
         protected override void Update(GameTime gameTime)
         {
@@ -73,7 +93,7 @@ namespace DinosaurGame
             }
             else if (State == GameState.Transition)
             {
-                _fadeInTexturePosX += 800f * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                _fadeInTexturePosX += TRANSITION_VELOCITY * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
                 if (_fadeInTexturePosX >= WINDOW_WIDTH) 
                 {
@@ -127,6 +147,9 @@ namespace DinosaurGame
         private const int TREX_START_POSITION_Y = WINDOW_HEIGHT - 16 - 49;
         private const int TREX_START_POSITION_X = 1;
 
+        private ScoreBoard _scoreBoard;
+
+
         private SoundEffect _sfxHit;
         private SoundEffect _sfxScoreReached;
         private SoundEffect _sfxButtonPress;
@@ -135,6 +158,7 @@ namespace DinosaurGame
         private Texture2D _fadeInTexture;
 
         private float _fadeInTexturePosX;
+        private const float TRANSITION_VELOCITY = 800f;
 
         private Trex _trex;
         private InputController _inputController;

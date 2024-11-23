@@ -39,11 +39,11 @@ namespace DinousaurGame.Entities
             _blinkAnimation.Play();
 
             _runAnimation = new SpriteAnimation();
-            CreatRunAnimation();
+            creatRunAnimation();
             _runAnimation.Play();
 
             _duckAnimation = new SpriteAnimation();
-            CreatDuckAnimation();
+            creatDuckAnimation();
             _duckAnimation.Play();
 
             _jumpSound = jumpSound;
@@ -60,7 +60,22 @@ namespace DinousaurGame.Entities
 
         public int DrawOrder { get; set; }
 
-        public float Speed { get; private set; } 
+        public float Speed { get; private set; }
+
+        public event EventHandler JumpComplete;
+
+        protected virtual void OnJumpComplete()  
+        {
+           EventHandler handler = JumpComplete;
+           handler?.Invoke(this, EventArgs.Empty);
+        }
+
+        
+        public void Initialize()
+        {
+            this.Speed = START_SPEED;
+            this.State = TrexState.Running;
+        }
 
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
@@ -109,9 +124,12 @@ namespace DinousaurGame.Entities
                 }
                 if(Position.Y >= _startPosY)
                 {
+                    
                     _verticalVelocity = 0;
                     this.Position = new Vector2(Position.X, _startPosY);
                     State = TrexState.Running;
+                    OnJumpComplete();
+
                 }
             }
 
@@ -136,8 +154,6 @@ namespace DinousaurGame.Entities
             State = TrexState.Ducking;
             return true;
         }
-
-        
 
         public bool Drop()
         {
@@ -214,6 +230,7 @@ namespace DinousaurGame.Entities
         private const float GRAVITY = 1600f;
         private const float MIN_JUMP_HIGHT = 40f;
         private const float DROP_VELOCITY = 2500f;
+        private const float START_SPEED = 200f;
 
 
         private const int TREX_DEFULT_SPRITE_WIDTH = 44;
@@ -245,13 +262,13 @@ namespace DinousaurGame.Entities
             _blinkAnimation.AddFrame(_idleSprite, (float)blinkTimeStamp + 1f);
         }
 
-        private void CreatRunAnimation()
+        private void creatRunAnimation()
         {
             _runAnimation.AddFrame( _runSpriteOne, 0);
             _runAnimation.AddFrame( _runSpriteTwo, 0.1f);
             _runAnimation.AddFrame( _runSpriteOne, 0.1f *2);
         }
-        private void CreatDuckAnimation()
+        private void creatDuckAnimation()
         {
             _duckAnimation.AddFrame(_duckSpriteOne, 0);
             _duckAnimation.AddFrame(_duckSpriteTwo, 0.1f);
