@@ -7,32 +7,32 @@
       "RelativeMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|solutionrelative:dinousaurgame\\entities\\scoreboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|c:\\users\\maria\\onedrive\\pulpit\\dinosaurgame\\dinousaurgame\\dinousaurgame\\graphics\\spritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|solutionrelative:dinousaurgame\\graphics\\spritem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|c:\\users\\maria\\onedrive\\pulpit\\dinosaurgame\\dinousaurgame\\dinousaurgame\\entities\\obstacle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|solutionrelative:dinousaurgame\\entities\\obstacle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|c:\\users\\maria\\onedrive\\pulpit\\dinosaurgame\\dinousaurgame\\dinousaurgame\\system\\inputcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|solutionrelative:dinousaurgame\\system\\inputcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|c:\\users\\maria\\onedrive\\pulpit\\dinosaurgame\\dinousaurgame\\dinousaurgame\\entities\\obsctlemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|solutionrelative:dinousaurgame\\entities\\obsctlemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|c:\\users\\maria\\onedrive\\pulpit\\dinosaurgame\\dinousaurgame\\dinousaurgame\\trexrunnergame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|solutionrelative:dinousaurgame\\trexrunnergame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|c:\\users\\maria\\onedrive\\pulpit\\dinosaurgame\\dinousaurgame\\dinousaurgame\\entities\\groundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|solutionrelative:dinousaurgame\\entities\\groundmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|c:\\users\\maria\\onedrive\\pulpit\\dinosaurgame\\dinousaurgame\\dinousaurgame\\entities\\groundtile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|solutionrelative:dinousaurgame\\entities\\groundtile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|c:\\users\\maria\\onedrive\\pulpit\\dinosaurgame\\dinousaurgame\\dinousaurgame\\entities\\entitymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|solutionrelative:dinousaurgame\\entities\\entitymanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|c:\\users\\maria\\onedrive\\pulpit\\dinosaurgame\\dinousaurgame\\dinousaurgame\\entities\\igameentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|solutionrelative:dinousaurgame\\entities\\igameentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|c:\\users\\maria\\onedrive\\pulpit\\dinosaurgame\\dinousaurgame\\dinousaurgame\\entities\\trex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|solutionrelative:dinousaurgame\\entities\\trex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|c:\\users\\maria\\onedrive\\pulpit\\dinosaurgame\\dinousaurgame\\dinousaurgame\\system\\inputcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D36FAC2-3C22-46A1-A1B5-E5C5623AD3AC}|DinousaurGame\\DinousaurGame.csproj|solutionrelative:dinousaurgame\\system\\inputcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,13 +46,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Trex.cs",
               "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Entities\\Trex.cs",
               "RelativeDocumentMoniker": "DinousaurGame\\Entities\\Trex.cs",
               "ToolTip": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Entities\\Trex.cs",
               "RelativeToolTip": "DinousaurGame\\Entities\\Trex.cs",
-              "ViewState": "AQIAAKUAAAAAAAAAAAAQwFQAAAAfAAAA",
+              "ViewState": "AQIAACgAAAAAAAAAAAAgwEAAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-10T11:15:40.751Z",
               "IsPinned": true,
@@ -60,17 +60,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "InputController.cs",
               "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\System\\InputController.cs",
               "RelativeDocumentMoniker": "DinousaurGame\\System\\InputController.cs",
               "ToolTip": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\System\\InputController.cs",
               "RelativeToolTip": "DinousaurGame\\System\\InputController.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwB0AAAAjAAAA",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwB0AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T21:39:24.478Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -80,10 +79,49 @@
               "RelativeDocumentMoniker": "DinousaurGame\\Entities\\ScoreBoard.cs",
               "ToolTip": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Entities\\ScoreBoard.cs",
               "RelativeToolTip": "DinousaurGame\\Entities\\ScoreBoard.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAAwE0AAAAyAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAgwDwAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T12:28:07.819Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GroundTile.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Entities\\GroundTile.cs",
+              "RelativeDocumentMoniker": "DinousaurGame\\Entities\\GroundTile.cs",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Entities\\GroundTile.cs",
+              "RelativeToolTip": "DinousaurGame\\Entities\\GroundTile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T19:17:06.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ObsctleManager.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Entities\\ObsctleManager.cs",
+              "RelativeDocumentMoniker": "DinousaurGame\\Entities\\ObsctleManager.cs",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Entities\\ObsctleManager.cs",
+              "RelativeToolTip": "DinousaurGame\\Entities\\ObsctleManager.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAQwCkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T19:07:30.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Obstacle.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Entities\\Obstacle.cs",
+              "RelativeDocumentMoniker": "DinousaurGame\\Entities\\Obstacle.cs",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Entities\\Obstacle.cs",
+              "RelativeToolTip": "DinousaurGame\\Entities\\Obstacle.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwBIAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T18:41:01.36Z",
               "EditorCaption": ""
             },
             {
@@ -104,67 +142,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GroundTile.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Entities\\GroundTile.cs",
-              "RelativeDocumentMoniker": "DinousaurGame\\Entities\\GroundTile.cs",
-              "ToolTip": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Entities\\GroundTile.cs",
-              "RelativeToolTip": "DinousaurGame\\Entities\\GroundTile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:38:10.511Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "EntityManager.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Entities\\EntityManager.cs",
-              "RelativeDocumentMoniker": "DinousaurGame\\Entities\\EntityManager.cs",
-              "ToolTip": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Entities\\EntityManager.cs",
-              "RelativeToolTip": "DinousaurGame\\Entities\\EntityManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:38:08.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
               "Title": "TrexRunnerGame.cs",
               "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\TrexRunnerGame.cs",
               "RelativeDocumentMoniker": "DinousaurGame\\TrexRunnerGame.cs",
               "ToolTip": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\TrexRunnerGame.cs",
               "RelativeToolTip": "DinousaurGame\\TrexRunnerGame.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAcwDwAAAAjAAAA",
+              "ViewState": "AQIAACMAAAAAAAAAAAAwwEAAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T13:24:07.198Z",
+              "WhenOpened": "2024-11-26T18:19:23.953Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IGameEntity.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Entities\\IGameEntity.cs",
-              "RelativeDocumentMoniker": "DinousaurGame\\Entities\\IGameEntity.cs",
-              "ToolTip": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Entities\\IGameEntity.cs",
-              "RelativeToolTip": "DinousaurGame\\Entities\\IGameEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "GroundManager.cs",
+              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Entities\\GroundManager.cs",
+              "RelativeDocumentMoniker": "DinousaurGame\\Entities\\GroundManager.cs",
+              "ToolTip": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Entities\\GroundManager.cs",
+              "RelativeToolTip": "DinousaurGame\\Entities\\GroundManager.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAwwFMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T12:41:57.641Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SpriteM.cs",
-              "DocumentMoniker": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Graphics\\SpriteM.cs",
-              "RelativeDocumentMoniker": "DinousaurGame\\Graphics\\SpriteM.cs",
-              "ToolTip": "C:\\Users\\maria\\OneDrive\\Pulpit\\DinosaurGame\\DinousaurGame\\DinousaurGame\\Graphics\\SpriteM.cs",
-              "RelativeToolTip": "DinousaurGame\\Graphics\\SpriteM.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAxwCcAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T12:41:24.013Z",
+              "WhenOpened": "2024-11-26T18:13:52.039Z",
               "EditorCaption": ""
             }
           ]

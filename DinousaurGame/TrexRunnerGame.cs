@@ -43,6 +43,8 @@ namespace DinosaurGame
             
         }
 
+      
+
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -57,8 +59,8 @@ namespace DinosaurGame
             _trex = new Trex(_SpriteSheetTexture, new Vector2(TREX_START_POSITION_X,TREX_START_POSITION_Y),_sfxButtonPress);
             _trex.DrawOrder = 10;
 
-            _scoreBoard = new ScoreBoard(_SpriteSheetTexture , new Vector2(WINDOW_WIDTH - 100f , 10f));
-            _scoreBoard.Score = 234;
+            _scoreBoard = new ScoreBoard(_SpriteSheetTexture , new Vector2(SCORE_BOARD_POS_X, SCORE_BOARD_POS_Y),_trex);
+            
 
             _fadeInTexture = new Texture2D(GraphicsDevice, 1, 1);
             _fadeInTexture.SetData(new Color[] {Color.White});
@@ -146,6 +148,8 @@ namespace DinosaurGame
         private const int WINDOW_HEIGHT = 150;
         private const int TREX_START_POSITION_Y = WINDOW_HEIGHT - 16 - 49;
         private const int TREX_START_POSITION_X = 1;
+        private const float SCORE_BOARD_POS_X = WINDOW_WIDTH - 70f;
+        private const float SCORE_BOARD_POS_Y = 10f;
 
         private ScoreBoard _scoreBoard;
 

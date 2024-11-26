@@ -11,41 +11,43 @@ namespace DinousaurGame.Entities
 {
     public class ScoreBoard : IGameEntity
     {
-        public ScoreBoard(Texture2D texture , Vector2 position) 
+        public ScoreBoard(Texture2D texture , Vector2 position, Trex trex) 
         {
             _texture = texture;
             this.Position = position;
+            _trex = trex;
         }
         public double Score { get; set; }
 
         public int DisplayScore => (int)Math.Floor(Score);
 
-        public int HighScore { get; set; }
+        public int HighScore { get; set; } 
+
+        public bool HasHighScore => HighScore > 0;
+
 
         public int DrawOrder { get;  } = 100;
         public Vector2 Position { get; set; }
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            int[] scoreDigits = SplitDigit(DisplayScore);
 
-            float posX = Position.X;    
+            drawScore(spriteBatch, this.DisplayScore , Position.X );
 
-            foreach (int digit in scoreDigits)
+            if (HasHighScore)
             {
-                SpriteM digitToDraw = getDigitToDraw(digit);
+                drawScore(spriteBatch, HighScore, Position.X-70f );
 
-                Vector2 screenPos = new Vector2(posX, Position.Y);
-                digitToDraw.Draw(spriteBatch, screenPos);
-
-                posX += TEXTURE_NUM_WIDTH;
+                SpriteM hiSprite = new SpriteM(_texture, TEXTURE_HI_POS_X, TEXTURE_NUM_POS_Y, TEXTURE_HI_WIDTH, TEXTURE_HI_HEIGHT);
+                hiSprite.Draw(spriteBatch, new Vector2(Position.X - 98f, Position.Y));
             }
 
-            
         }
+
 
         public void Update(GameTime gameTime)
         {
-          
+            Score +=  _trex.Speed * SCORE_INCREMENT_MULTIPLIER * gameTime.ElapsedGameTime.TotalSeconds ; 
+
         }
         
 
@@ -54,9 +56,17 @@ namespace DinousaurGame.Entities
         private const int TEXTURE_NUM_WIDTH = 10;
         private const int TEXTURE_NUM_HEIGHT  = 13;
 
+        private const int TEXTURE_HI_POS_X = 755;
+        private const int TEXTURE_HI_POS_Y = 0;
+        private const int TEXTURE_HI_WIDTH = 20;
+        private const int TEXTURE_HI_HEIGHT = 13;
+
         private const int NUMBER_DIGIT_TO_DRAW = 5;
 
+        private const float SCORE_INCREMENT_MULTIPLIER = 0.04f;
+
         private Texture2D _texture;
+        private Trex _trex;
 
         private DinosaurGame.Graphics.SpriteM getDigitToDraw ( int num)  
         {
@@ -85,6 +95,22 @@ namespace DinousaurGame.Entities
 
         }
 
+        private void drawScore(SpriteBatch spriteBatch , int score, float positionX)
+        {
+            int[] scoreDigits = SplitDigit(score);
+
+            float posX = positionX;
+
+            foreach (int digit in scoreDigits)
+            {
+                SpriteM digitToDraw = getDigitToDraw(digit);
+
+                Vector2 screenPos = new Vector2(posX, Position.Y);
+                digitToDraw.Draw(spriteBatch, screenPos);
+
+                posX += TEXTURE_NUM_WIDTH;
+            }
+        }
     }   
 }
         
